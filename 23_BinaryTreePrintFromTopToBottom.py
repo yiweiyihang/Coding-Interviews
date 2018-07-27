@@ -24,6 +24,7 @@ class Solution:
         res = []
         myQueue.append(root)
         while(myQueue):
+            node = myQueue.pop(0)
             res.append(node.val)
             if(node.left):
                 myQueue.append(node.left)
