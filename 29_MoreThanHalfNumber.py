@@ -43,7 +43,7 @@ class Solution:
         else: return 0
 
     def Partition(self,numbers,length,start,end):
-        pivot = numbers[-1]
+        pivot = numbers[end]
         p = start-1
         for j in range(start,end-1):
             if(numbers[j] < pivot):
@@ -99,7 +99,7 @@ class Solution1:
             isMoreThanHalf = True
         return isMoreThanHalf
 
-s = Solution1()
+s = Solution()
 a = [1,2,3,2,2,2,5,4,2]
 b = [1,3,4,5,2,2,2,2,2]
 c = [4,2,1,4,2,4]
