@@ -20,10 +20,10 @@ class Solution:
         end = len(tinput) -1
         index = self.Partition(tinput,start,end)
         while(index != k-1):
-            if(index < k):
+            if(index < k-1):
                 start = index+1
                 index = self.Partition(tinput,start,end)
-            elif(index > k):
+            else:
                 end = index-1
                 index = self.Partition(tinput,start,end)
         return sorted(tinput[:k])
