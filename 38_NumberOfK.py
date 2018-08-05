@@ -14,7 +14,7 @@ class Solution:
         --> 二分查找到数字k 向左右两边顺序扫描 分别找到第一个k和最后一个k  --> 顺序扫描的时间复杂度为O(n)
     """
     def GetNumberOfK(self, data, k):
-        if(not data or len(data) == 0): return 0
+        if(not data): return 0
         inData = False
         start = 0
         end = len(data)-1
@@ -48,7 +48,7 @@ class Solution:
         利用二分查找算法直接找到第一个k和最后一个k --> 时间复杂度O(logn)
     """
     def GetNumberOfK1(self,data,k):
-        if(not data or len(data) == 0): return 0
+        if(not data): return 0
         start = 0
         end = len(data)-1
         number = 0

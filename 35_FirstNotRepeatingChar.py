@@ -13,7 +13,7 @@ Created on Wed Aug  1 15:21:56 2018
 """
 class Solution:
     def FirstNotRepeatingChar(self, s):
-        if(not s or len(s) == 0):return -1
+        if(not s):return -1
         # 利用哈希表存储每个字符的出现次数
         dict = {}
         # 第一次遍历字符串 统计每个字符的出现次数

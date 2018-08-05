@@ -13,7 +13,7 @@ Created on Tue Jul 31 22:54:19 2018
 class Solution:
     def PrintMinNumber(self, numbers):
         # 运行环境 Python2.7
-        if(not numbers or len(numbers) == 0): return ""
+        if(not numbers): return ""
         # 将数字转换为字符串
         numbers = list(map(str,numbers))
         # 字符串按大小排序
@@ -24,7 +24,7 @@ from functools import cmp_to_key
 class Solution:
     def PrintMinNumber(self,numbers):
         # 运行环境Python3
-        if(not numbers or len(numbers) == 0): return ""
+        if(not numbers): return ""
         numbers = list(map(str,numbers))
         key = cmp_to_key(lambda x,y:int(x+y) - int(y+x))
         numbers.sort(key=key)

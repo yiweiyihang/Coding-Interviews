@@ -12,7 +12,7 @@ Created on Thu Aug  2 09:15:41 2018
 """
 class Solution:
     def InversePairs(self,data):
-        if(not data or len(data) == 0): return 0
+        if(not data): return 0
         length = len(data)
         copy = []
         for element in data:
