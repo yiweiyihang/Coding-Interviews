@@ -19,11 +19,13 @@ class Solution:
         while(small < middle): # 因为序列中至少要有两个数字  则一直增加small到(1+s)/2为止
             if(curSum == tsum):
                 res.append(self.addSequence(small,big))
+            # 若small到big序列和大于s  从序列中去掉较小值 即增大small
             while(curSum > tsum and small < middle):
                 curSum -= small
                 small += 1
                 if(curSum == tsum):
                     res.append(self.addSequence(small,big))
+            # 若small到big序列和小于s  增大big 让序列中包含更多数字
             big += 1
             curSum += big
         return res
