@@ -47,9 +47,11 @@ class Solution:
     def duplicate(self,numbers,duplication):
         """
             法三: 检查索引为i的位置数字是否为i
+            --> 时间复杂度 O(n)  空间复杂度 O(1)
         """
         flag = False
         for i in range(len(numbers)):
+            #  每个数字最多只需要交换两次就能找到自己的位置
             while(i != numbers[i]):
                 if(numbers[i] == numbers[numbers[i]]):
                     flag = True
